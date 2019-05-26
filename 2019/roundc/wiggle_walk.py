@@ -92,10 +92,10 @@ class Solution(object):
         print("Case #{}: {}".format(self.test_case_id, result))
 
 if __name__ == "__main__":
-    # test_cases = input()
-    s = Solution(1, 'EEWNS', 3, 6, 2, 3) # 3, 2 
-    s.output(s.solve())
-    s = Solution(2, 'SESE', 3, 3, 1, 1)
-    s.output(s.solve())
-    s = Solution(3, 'NEESSWWNESE', 5, 8, 3,4)
-    s.output(s.solve())
+    t = int(input())  # read a line with a single integer
+    for i in range(1, t + 1):
+        _, rows, cols, starting_row, starting_col = [int(s) for s in input().split(" ")]  # read a list of integers, 2 in this case
+        instructions = input()
+        # check out .format's specification for more formatting options
+        s = Solution(i, instructions, rows, cols, starting_row, starting_col) # 3, 2 
+        s.output(s.solve())
